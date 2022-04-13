@@ -25,5 +25,5 @@ class Recorder:
                 zip_file = f'{year}-{month} ({week}).zip'
                 zip_file_path = self.archive_path / zip_file
                 with ZipFile(zip_file_path, 'a') as week_archive:
-                    week_archive.write(file)
+                    week_archive.write(file, file.name)
                 file.unlink()
